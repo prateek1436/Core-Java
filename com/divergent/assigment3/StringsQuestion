@@ -1,0 +1,136 @@
+Question 1: Why String objects are called immutable?
+Ans : - String Objects are immutable because it Store in String pool, and its shared String literals more than one client.
+
+Question 2: How is String object created in memory?
+Ans : If String object is create with string literal then it store in String Pool.And If we can create String Object use NEW 
+Keyword then it store in Head Memory.
+String str = "StringPool";//String Object create by String Literal
+String str1 = new String("HeapMemory"); //String Object create by new Keyword
+
+Question 3: What are the advantages and disadvantages of String Immutability?
+Ans : Advantage :- It save the memory.
+	
+					
+	Disadvantage :- 1.As String is immutable and its value cannot be changed, a memory dump or accidental logging of such 
+	String can reveal sensitive content like password or account number, stored into it. So instead, it's advisable to use char array
+	(char []) to store such sensitive information, which can be explicitly overwritten by an overriding content, thus reducing 
+	the window of opportunity for an attack.
+	2. Performence is slow.
+	
+Question 4: Why String objects are considered thread safe?
+Ans :- String Object are considered thread safe because String is immutable, String can not be used by two threads simultaneously.
+
+Question 5: What are the advantages of declaring the String class final?
+Ans :- If we String class final declare then we can not change it, and it is immutable.and 
+
+Question 6: What memory optimization is performed by the Java environment for Strings?
+Ans :- In String class we can create string object then in the JVM can optimize the amount of memory allocated for them by storing only
+ one copy of each literal String in the pool.
+ 
+Question 7: Why you don't have to calculate hash-code of the String object every time it's used?
+Ans :- Because HashCode not change back to the same String.
+public class HashCodeOfStringUsed {
+
+	public static void main(String[] args) {
+		System.out.println("Hello".hashCode());
+		System.out.println("Hello1".hashCode());
+	}
+}
+output :- 69609650
+		  69609650
+
+Question 8: What is String literal?
+Ans: A string literal in Java is basically a sequence of characters from the source character
+ set used by programmers to populate string objects or to display text to a user.
+ These characters could be anything like letters, numbers or symbols which are enclosed within two quotation marks.
+ String str = "StringLiteral";
+ 
+Question 9: What are the differences between String Literal and String Object?
+Ans :- String Literal are stored into String Pool/Reference Pool. Ex:- String str = "Hello String Literal";
+	   String Object are stored new keyword used then it create new string object. String str = new String("Hello String Object");
+	   
+Question 10: How are the String Literals stored?
+Ans :- We, can use example to stored String Literals.
+
+String str = "Hello1"; //It point the String Pool
+String str1 = "hello2"; //It used another pool are point.
+String str3 = "hello1";// It point the same reference pool/String Pool same bucket.
+
+Question 11: What is String interning?
+Ans:- String interning is a method of storing only one copy of each distinct string value, and then reusing them.
+
+Question 12: How can you intern a String Object?
+Ans:- intern() is a method to used in string for reusing the storing new String Object.
+
+String str = "Hello";
+String str1 = new String("Hello").intern();  
+str and str1 both are point same string pool copy.
+
+Question 13: What happens when you store a new String literal value that is already present in the string pool?
+Ans: It point the same copy of already present string pool.
+
+Question 14: What are the drawbacks of creating large number of String literals? 
+Ans :- 
+
+Question 15: Which one is preferred: String Object or String Literal? Why?
+Ans:- String Literal, Because it can stored in String pool and save memory.
+
+Question 16: Explain String Pool Memory Management?
+Ans:- String Pool store in heap area. It can point only those String which are create by String Literal.
+Exmaple:- String str1 = "String1";
+		  String str2 = "String1";
+		  
+	Above both String are point same reference pool.
+	
+Question 17: How are String Literals stored in memory?
+Ans :- String are store in heap area, that area is called by String Constant Pool. we can create a String then it can check that it 
+create by String Literals then it point the String Pool Area.
+
+Question 18: How String Pool is optimized for memory?
+Ans:- String Pool is optimized memory by string literal and intern() method it point same reference pool.
+
+Question 19: How are String Objects stored in memory?
+Ans:- String Object are stored in memory by using new Keyword, and it stored in Heap Area.
+
+Question 20: Why can't Java use mechanism similar to String Pool, to store objects of other data types?
+Ans:- Because String is class and it store in memory is costly.
+	* String is immutable.
+	
+Question 21: How are String literals cleared from the String Pool?
+Ans: In java String literals cleared from the String pool it only time of used but String Object are Delete on time of complete and 
+end of code.
+
+Question 22: Can you use reflection to clear a String object?
+Ans:- 
+
+Question 23: What are the security issues associated with the immutable Strings?
+Ans: In security issue in String can reveal sensitive content like password or account number, stored into it.
+
+Question 24: Why using char array is advisable to store password, instead of String?
+Ans: because of It create hashcode for every password different.
+
+Question 25: What are the similarities and differences between StringBuffer and StringBuilder?
+Ans: Similarities : Both are mutable.
+		Difference: StringBuffer is Synchronized and StringBuilder is not Synchronized and it take less time then StringBuffer.
+
+Question 26: When would you prefer StringBuffer to StringBuilder?
+Ans: In a single method we can use StringBuilder, But StringBuffer is used when we try a secure and thread safe priority.
+
+Question 27: Between StringBuffer and StringBuilder, which one would you prefer in a single-threaded application?
+Ans: StringBuffer.
+
+Question 28: What are Unicode characters?
+Ans: the encodings for languages with large character sets have variable length: Some common characters are encoded as single bytes,
+ others require two or more bytes.
+
+Question 29: What are the advantages of using Unicode characters?
+Ans: Unicode character is better then old encoding system. it can give 65536 value.it have all languages character are encoding.
+
+Question 30: What were the problems with old encoding systems?
+Ans: In Old encoding system have limited value, And less character.
+
+Question 31: Try following VM arugements
+-XX:+PrintFlagsFinal    -XX:+PrintStringTableStatistics   -XX:StringTableSize=4901
+
+Question 32: What is automatic intern in terms of Strings.
+Ans: In String Literal create a String then automatic call Intern Method.
