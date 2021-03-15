@@ -8,6 +8,10 @@ package com.divergent.assigment1;
  */
 public class EigthApp {
 
+	/**
+	 * In this method we can use for find how many vowel and consonant are available in string
+	 * @param str
+	 */
 	static void findVowelConsonant(String str) {
 		int vowelC = 0, ConsC = 0;
 		for (int i = 0; i < str.length(); i++) {
