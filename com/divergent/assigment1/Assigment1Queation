@@ -1,0 +1,54 @@
+Question 1: What is the difference between JDK and JRE?
+Ans :- Bytecode is a highly optimized set of instructions designed to be executed by what is called the Java Virtual Machine (JVM), 
+which is part of the Java Runtime Environment (JRE). In essence, the original JVM was designed as an interpreter for bytecode. 
+If any system JRE have then Java Bytecode run on it. 
+
+Question 2: What is Java Virtual Machine (JVM)?
+Ans :-  JVM is part of JRE and It designed instructions that is highly optimized way is bytecode.
+
+Question 3 : What are the different types of memory areas allocated by JVM?
+Ans :-  In Java JVM allocated memory on heap area , in which object are create for every class.Also static area in heap memory 
+it store static variable on it.
+
+Question 4: What is JIT compiler?
+Ans :- Just-In-Time compiler in which code execute in small parts. And it is part of complier . JIT compiler is execute and 
+complie on a time.
+
+Question 5: How Java platform is different from other platforms?
+Ans :-  Java platform is different form other because in java we can use byte code on other system and run it. Before that we 
+can install jdk in system.
+
+Question 6: What are primitive data types?
+Ans :- Java is Strongly type Language. It have Eigth primitive type are :- byte,short,int,long,float,double,char,Boolean.
+
+Question 7: Why it is not preferred to use float and double in financial applications, write a program to discribe the issue.
+Ans :- In Financial application it used for add,multiple,subtraction,division are
+Minor changes it major changes happen that why we can not used float and double in financial application , and it replace by 
+Big decimal.
+
+public class FirstApp {
+	public static void main(String[] args) {
+		System.out.println (2.0 - 1.1);
+		System.out.println (1/10);
+	}
+}
+
+Output: -	 0.8999999999999999
+ 			 0
+
+Question 8: If a variable of primitive data type is not assigned, what does it contain?
+Ans: - If we cannot assigned datatype to variable then get error that are:
+		X = 10
+		x cannot be resolved to a variable
+
+Question 9: Why do we suffix L with long, F with Float and D with double?
+Ans : In long we can use suffix as L because in java By Default Integer Primitive type used int. In a F suffix with float because
+ in java By Default Double Primitive type used double, In double suffix D because it not taken a double it.
+
+Question 10: What happens when you assign a variable of primitive data type to another variable of same type?
+Ans: - When we assign a variable of primitive data type to another variable of same type it can assign that variable some value 
+then it run. But if we cannot assign value and it assign to another one variable then get error compile time – the local
+variable x may  not have been initialized.
+
+Question 11 : What are reference data types?
+Ans: - In Java we have a reference data type that are reference to other object.And it is a Non-primitive type.

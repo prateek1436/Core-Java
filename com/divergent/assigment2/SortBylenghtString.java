@@ -1,33 +1,39 @@
 package com.divergent.assigment2;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
-
-
-class LenghtCompare implements Comparator{
-	public int compare(Object o1,Object o2) {
-		String s1 = (String) o1;
-		String s2 = (String) o2;
-		return s1.compareTo(s2);
-	}
-}
+/**
+ * Write a program that sorts by the length of the given array of strings.
+ * 
+ * @author Prateek
+ *
+ */
 public class SortBylenghtString {
 
+	/**
+	 * In this method we get string parameter method that have some string different
+	 * lenght,then we use that for sort the lenght.
+	 * 
+	 * @param strArray
+	 * @return
+	 */
+	public static String[] sortArrayByLength(String strArray[]) {
+		for (int i = 0; i < strArray.length; i++) {
+			for (int j = i + 1; j < strArray.length; j++) {
+				if (strArray[j].length() < strArray[i].length()) {
+					String sortstr = strArray[i];
+					strArray[i] = strArray[j];
+					strArray[j] = sortstr;
+				}
+			}
+		}
+		return strArray;
+	}
+
 	public static void main(String[] args) {
-		List<String> list = new ArrayList<>();
-		list.add("Hello Ram");
-		list.add("Shyam");
-		list.add("Snehvarkhas");
-		list.add("Patel");
-		Collections.sort(list,new LenghtCompare());  
-		Iterator itr=list.iterator();  
-		while(itr.hasNext()){  
-		String st=(String) itr.next();  
-		System.out.println(st);  
-		}  
+		String stringArray[] = { "sadfge", "qwertyuwer", "afgerhjr", "agtrjyujrtegsbfgn", "ascwebeACASC" };
+		stringArray = sortArrayByLength(stringArray);
+		for (String sortArray1 : stringArray) {
+			System.out.println(sortArray1);
+		}
 	}
 
 }

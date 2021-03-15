@@ -1,0 +1,11 @@
+Question 1: Why you shouldn't use equality operator to compare float values?
+Ans : In equality operator to compare float value is not equal because it value is point round.
+
+Question 2: What is the preferred way to compare two float values?
+Ans: Float value are compare on it small value. if we use on a Finacial Calculation then get differ value.
+
+Question 3: What should be the criteria to define range value that should be used to compare two float values?
+Ans: In float we can used F,f are suffix to create float value.
+
+Question 4: What is use of Strictfp?
+Ans: It is used mainly in floating point value, because of it use then value is not differ.Example:- StrictfpUsed.java
