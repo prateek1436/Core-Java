@@ -1,0 +1,119 @@
+Question : - What are the various class design guidelines?
+Ans :- 
+class ClassName
+{
+	field1
+	field2
+	. . .
+	constructor1
+	constructor2
+	. . .
+	method1
+	method2
+	. . .
+}
+
+Question :- What is a "import static" write a program to show how it is used
+Ans :- In Below Program we can use static import or System and Math Class.
+
+package com.divergent.assigment5;
+
+import static java.lang.Math.*;
+import static java.lang.System.*;
+
+public class StaticImportUsed {
+
+	public static void main(String[] args) {
+		out.println("Static Import System");
+		out.println(pow(5, 2));
+		out.println(sqrt(25));
+	}
+
+}
+
+Question :- What is the proper way of naming a package in java, show using an example.
+Ans :- <revese order domain name>.<project name>.<forlder name>
+
+package com.divergent.assigment5;
+
+Question :- Why "finalize" method is deprecated?
+Ans :- finalize() method is used for garbage collection. but it drawback is that - 
+finalize() method execute is not a grarante.
+and it replace by cleaner() and hooks.
+
+Question :- Use a static initialization block to show its use.
+Ans :- static initialization block is excecute one time at the time of class load, and it only initialized only static variable.
+
+Question :- Use a non-static initialization block to show its use
+Ans :- non-static initialization block of code execute at the time of class object call, and use for it initialized instance variable.
+
+Question :- Overloading is compile time or runtime?
+Ans :- Compile time.
+
+Question :- Do we need encapsulation for constants?
+Ans :- Constants variable is no need of encapsulation because constants are used for all object and class.
+
+Question :- When should the private methods be used in a class?
+Ans :- private methods are only in the interface default method not out side of that class and interface.
+
+Question :- Make use of “var” keyword for local variable.
+Ans :- Program.
+
+package com.divergent.assigment5;
+
+public class VarKeywordUsed {
+
+	public static void main(String[] args) {
+		var a = "String";
+		var b = 100;
+		System.out.println("var a as String : "+a);
+		System.out.println("var a as Number : "+b);
+	}
+
+}
+
+
+Question :- What is constructor chaining, write a program to show it.
+Ans :- constructor chaining is process in which we can create multiple custructor,one by one initialized only one instance and reference.
+In chaining we can used this and super keyword in first line of custructor.
+
+Program : -
+package com.divergent.assigment5;
+
+class ChainingClass {
+	
+	ChainingClass() {
+		this("Parameter");
+		System.out.println("Default Custructor");
+	}
+
+	ChainingClass(String para) {
+		System.out.println("Parameterized Custructor");
+	}
+}
+
+public class ChainingCustructorUsed {
+
+	public static void main(String[] args) {
+		ChainingClass chainingClass = new ChainingClass();
+	}
+
+}
+
+Question :- What are the three ways of initializing instance variables?
+Ans :- Initialized instance variable by custructors, instance block.
+
+Question :- What are the different default values assigned to different types of instance variable of a class, prove using a program,
+by printing values.
+Ans :- Program.
+
+Question :- Write a program to show constructor overloading and method overloading?
+Ans :- Program.
+
+Question :- Is Java pass by value or pass by reference, prove using a program?
+Ans :- In java pass by value used.
+Program.
+
+Question :- What are two benefits of using the Factory methods?
+Ans :- Factory methods benefits are - We can not create object with new Keyword .
+We can provide limitation in class by singleton method.
